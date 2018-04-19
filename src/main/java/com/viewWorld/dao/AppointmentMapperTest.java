@@ -13,15 +13,22 @@ import java.util.Date;
 @ContextConfiguration({ "classpath:spring/spring-dao.xml", "classpath:spring/spring-service.xml" })
 public class AppointmentMapperTest {
 
+    //spring依赖注入
     @Autowired
     private AppointmentMapper appointmentMapper;
 
+
+    /**
+     * spring+mybatis整合初步测试
+     * 测试数据库连接
+     * 测试Mapper.xml及配置的正确性
+     */
     @Test
     public void testSelectByPrimaryKey() {
         Appointment appointment = new Appointment();
         appointment.setAppointTime(new Date());
         appointment.setBookId(1000L);
-        appointment.setStudentId(1507080116L);
+        appointment.setStudentId(123456789L);
         appointmentMapper.insert(appointment);
         Appointment appointment1 = appointmentMapper.selectByPrimaryKey(appointment);
 
