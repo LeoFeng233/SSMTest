@@ -1,4 +1,4 @@
-package com.fs.entity;
+package fs.BMS.entity;
 
 import java.util.Date;
 

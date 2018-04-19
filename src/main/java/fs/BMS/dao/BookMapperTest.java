@@ -1,7 +1,7 @@
-package com.fs.dao;
+package fs.BMS.dao;
 
 
-import com.fs.entity.Book;
+import fs.BMS.entity.Book;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

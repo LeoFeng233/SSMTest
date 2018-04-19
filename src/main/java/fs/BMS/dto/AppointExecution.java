@@ -1,7 +1,7 @@
-package com.fs.dto;
+package fs.BMS.dto;
 
-import com.fs.entity.Appointment;
-import com.fs.enums.AppointStateEnum;
+import fs.BMS.entity.Appointment;
+import fs.BMS.enums.AppointStateEnum;
 
 public class AppointExecution {
 

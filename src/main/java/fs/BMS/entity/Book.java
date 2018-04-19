@@ -1,4 +1,4 @@
-package com.fs.entity;
+package fs.BMS.entity;
 
 public class Book {
     private long bookId;// 图书ID

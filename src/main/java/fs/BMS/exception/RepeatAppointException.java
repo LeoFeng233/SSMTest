@@ -1,4 +1,4 @@
-package com.fs.exception;
+package fs.BMS.exception;
 
 /**
  * 重复预约异常

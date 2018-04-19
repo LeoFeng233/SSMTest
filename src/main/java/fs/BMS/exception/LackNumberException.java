@@ -1,4 +1,4 @@
-package com.fs.exception;
+package fs.BMS.exception;
 
 /**
  * 库存不足异常

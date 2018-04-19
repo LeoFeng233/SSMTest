@@ -1,4 +1,4 @@
-package com.fs.exception;
+package fs.BMS.exception;
 
 /**
  * 预约业务异常

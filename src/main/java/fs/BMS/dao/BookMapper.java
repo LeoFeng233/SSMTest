@@ -1,6 +1,6 @@
-package com.fs.dao;
+package fs.BMS.dao;
 
-import com.fs.entity.Book;
+import fs.BMS.entity.Book;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

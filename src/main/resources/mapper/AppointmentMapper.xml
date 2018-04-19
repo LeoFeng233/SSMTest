@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.fs.dao.AppointmentMapper">
+<mapper namespace="fs.BMS.dao.AppointmentMapper">
 
-    <resultMap id="BaseResultMap" type="com.fs.entity.Appointment">
+    <resultMap id="BaseResultMap" type="fs.BMS.entity.Appointment">
         <id column="book_id" property="bookId" jdbcType="BIGINT"/>
         <id column="student_id" property="studentId" jdbcType="BIGINT"/>
         <result column="appoint_time" property="appointTime" jdbcType="TIMESTAMP"/>
         <!--此处配置延迟加载查询book元素-->
-        <association property="book" javaType="com.fs.entity.Book"
-                     select="com.fs.dao.BookMapper.selectByPrimaryKey" column="book_id">
+        <association property="book" javaType="fs.BMS.entity.Book"
+                     select="fs.BMS.dao.BookMapper.selectByPrimaryKey" column="book_id">
             <id column="book_id" property="bookId" jdbcType="BIGINT"/>
             <result column="name" property="name" jdbcType="VARCHAR"/>
             <result column="number" property="number" jdbcType="INTEGER"/>
@@ -19,25 +19,25 @@
     book_id, student_id, appoint_time
   </sql>
 
-    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="com.fs.entity.AppointmentKey">
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="fs.BMS.entity.AppointmentKey">
         select
         <include refid="Base_Column_List"/>
         from appointment
         where book_id = #{bookId,jdbcType=BIGINT}
         and student_id = #{studentId,jdbcType=BIGINT}
     </select>
-    <delete id="deleteByPrimaryKey" parameterType="com.fs.entity.AppointmentKey">
+    <delete id="deleteByPrimaryKey" parameterType="fs.BMS.entity.AppointmentKey">
     delete from appointment
     where book_id = #{bookId,jdbcType=BIGINT}
       and student_id = #{studentId,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.fs.entity.Appointment">
+    <insert id="insert" parameterType="fs.BMS.entity.Appointment">
     insert into appointment (book_id, student_id, appoint_time
       )
     values (#{bookId,jdbcType=BIGINT}, #{studentId,jdbcType=BIGINT}, #{appointTime,jdbcType=TIMESTAMP}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.fs.entity.Appointment">
+    <insert id="insertSelective" parameterType="fs.BMS.entity.Appointment">
         insert into appointment
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="bookId != null">
@@ -62,7 +62,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.fs.entity.Appointment">
+    <update id="updateByPrimaryKeySelective" parameterType="fs.BMS.entity.Appointment">
         update appointment
         <set>
             <if test="appointTime != null">
@@ -72,7 +72,7 @@
         where book_id = #{bookId,jdbcType=BIGINT}
         and student_id = #{studentId,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.fs.entity.Appointment">
+    <update id="updateByPrimaryKey" parameterType="fs.BMS.entity.Appointment">
     update appointment
     set appoint_time = #{appointTime,jdbcType=TIMESTAMP}
     where book_id = #{bookId,jdbcType=BIGINT}

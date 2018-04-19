@@ -1,4 +1,4 @@
-package com.fs.entity;
+package fs.BMS.entity;
 
 public class AppointmentKey {
     private Long bookId;
