@@ -1,6 +1,6 @@
-package com.viewWorld.dao;
+package com.fs.dao;
 
-import com.viewWorld.entity.Book;
+import com.fs.entity.Book;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

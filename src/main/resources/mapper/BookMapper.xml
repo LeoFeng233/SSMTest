@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.viewWorld.dao.BookMapper">
-    <resultMap id="BaseResultMap" type="com.viewWorld.entity.Book">
+<mapper namespace="com.fs.dao.BookMapper">
+    <resultMap id="BaseResultMap" type="com.fs.entity.Book">
         <id column="book_id" property="bookId" jdbcType="BIGINT"/>
         <result column="name" property="name" jdbcType="VARCHAR"/>
         <result column="number" property="number" jdbcType="INTEGER"/>
@@ -30,13 +30,13 @@
     delete from book
     where book_id = #{bookId,jdbcType=BIGINT}
   </delete>
-    <insert id="insert" parameterType="com.viewWorld.entity.Book">
+    <insert id="insert" parameterType="com.fs.entity.Book">
     insert into book (book_id, name, number
       )
     values (#{bookId,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{number,jdbcType=INTEGER}
       )
   </insert>
-    <insert id="insertSelective" parameterType="com.viewWorld.entity.Book">
+    <insert id="insertSelective" parameterType="com.fs.entity.Book">
         insert into book
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="bookId != null">
@@ -61,7 +61,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.viewWorld.entity.Book">
+    <update id="updateByPrimaryKeySelective" parameterType="com.fs.entity.Book">
         update book
         <set>
             <if test="name != null">
@@ -73,7 +73,7 @@
         </set>
         where book_id = #{bookId,jdbcType=BIGINT}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.viewWorld.entity.Book">
+    <update id="updateByPrimaryKey" parameterType="com.fs.entity.Book">
     update book
     set name = #{name,jdbcType=VARCHAR},
       number = #{number,jdbcType=INTEGER}

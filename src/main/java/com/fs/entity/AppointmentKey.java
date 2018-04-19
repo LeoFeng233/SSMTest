@@ -1,4 +1,4 @@
-package com.viewWorld.entity;
+package com.fs.entity;
 
 public class AppointmentKey {
     private Long bookId;

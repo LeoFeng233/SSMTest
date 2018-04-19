@@ -1,4 +1,4 @@
-package com.viewWorld.entity;
+package com.fs.entity;
 
 import java.util.Date;
 

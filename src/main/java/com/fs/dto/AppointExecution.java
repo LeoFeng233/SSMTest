@@ -1,7 +1,7 @@
-package com.viewWorld.dto;
+package com.fs.dto;
 
-import com.viewWorld.entity.Appointment;
-import com.viewWorld.enums.AppointStateEnum;
+import com.fs.entity.Appointment;
+import com.fs.enums.AppointStateEnum;
 
 public class AppointExecution {
 

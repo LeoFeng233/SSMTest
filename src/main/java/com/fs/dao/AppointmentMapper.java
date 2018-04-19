@@ -1,7 +1,7 @@
-package com.viewWorld.dao;
+package com.fs.dao;
 
-import com.viewWorld.entity.Appointment;
-import com.viewWorld.entity.AppointmentKey;
+import com.fs.entity.Appointment;
+import com.fs.entity.AppointmentKey;
 
 public interface AppointmentMapper {
 
