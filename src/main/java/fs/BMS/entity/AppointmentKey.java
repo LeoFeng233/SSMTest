@@ -5,6 +5,14 @@ public class AppointmentKey {
 
     private Long studentId;
 
+    public AppointmentKey() {
+    }
+
+    public AppointmentKey(Long bookId, Long studentId) {
+        this.bookId = bookId;
+        this.studentId = studentId;
+    }
+
     public Long getBookId() {
         return bookId;
     }

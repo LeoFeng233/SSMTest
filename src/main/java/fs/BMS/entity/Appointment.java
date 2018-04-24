@@ -7,6 +7,15 @@ public class Appointment extends AppointmentKey {
 
     private Book book;
 
+    public Appointment() {
+        super();
+    }
+
+    public Appointment(long bookId, long studentId, Date date) {
+        super(bookId, studentId);
+        this.appointTime = date;
+    }
+
     public Book getBook() {
         return book;
     }

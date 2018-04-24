@@ -32,7 +32,7 @@
       and student_id = #{studentId,jdbcType=BIGINT}
   </delete>
     <insert id="insert" parameterType="fs.BMS.entity.Appointment">
-    insert into appointment (book_id, student_id, appoint_time
+    insert ignore into appointment (book_id, student_id, appoint_time
       )
     values (#{bookId,jdbcType=BIGINT}, #{studentId,jdbcType=BIGINT}, #{appointTime,jdbcType=TIMESTAMP}
       )

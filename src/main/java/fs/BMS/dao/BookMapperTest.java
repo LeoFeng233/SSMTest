@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.List;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration({ "classpath:spring/spring-dao.xml", "classpath:spring/spring-service.xml" })
+@ContextConfiguration({ "classpath:spring/spring-dao.xml"})
 public class BookMapperTest {
 
     @Autowired
@@ -32,5 +32,15 @@ public class BookMapperTest {
         System.out.println(update);
         Book book = bookMapper.selectByPrimaryKey((long)1000);
         System.out.println(book);
+    }
+
+    @Test
+    public void testUpdateByPrimaryKeySelective() {
+        Book book = new Book();
+        book.setBookId(1000L);
+        book.setNumber(10);
+
+        int update = bookMapper.updateByPrimaryKeySelective(book);
+        System.out.println(update);
     }
 }
