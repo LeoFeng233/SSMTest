@@ -36,16 +36,8 @@ public class AppointExecution {
         return state;
     }
 
-    public void setState(int state) {
-        this.state = state;
-    }
-
     public String getStateInfo() {
         return stateInfo;
-    }
-
-    public void setStateInfo(String stateInfo) {
-        this.stateInfo = stateInfo;
     }
 
     public Appointment getAppointment() {
